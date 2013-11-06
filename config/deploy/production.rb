@@ -7,10 +7,10 @@ server "your-server-address-or-ip", :web, :app, :db, primary: true
 set :rails_env, :production
 
 # the name of your application
-set :application_name, "your_app_name"
+set :application_name, "rails_4_deployment_demo"
 
 # the domain you'll be deploying your application to
-set :application_domain, "domain.example.com"
+set :application_domain, "rails_4_deployment_demo.talkingquickly.co.uk"
 
 # your application name which is used in file paths is a combination
 # of the application name and the rails environment
@@ -27,7 +27,7 @@ set :use_sudo, false
 # the details of the source control where the codebase should be
 # retrieved from from
 set :scm, "git"
-set :repository, "your_git_repo"
+set :repository, "git@github.com:TalkingQuickly/rails_4_deployment_demo.git"
 set :branch, "master"
 
 # make sure rbenv ruby is available
