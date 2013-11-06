@@ -79,7 +79,7 @@ namespace :deploy do
     sudo "ln -nfs #{shared_path}/config/unicorn_init.sh /etc/init.d/unicorn_#{application}"
 
     # create an example database.yml file
-    put File.read("config/deploy/#{rails_env}_resources/database.sample.yml"), "#{shared_path}/config/database.yml"
+    template "config/deploy/#{rails_env}_resources/database.sample.yml.erb", "#{shared_path}/config/database.yml"
 
     # remind us that these config file need editing
     puts "Now edit the config files in #{shared_path}."
