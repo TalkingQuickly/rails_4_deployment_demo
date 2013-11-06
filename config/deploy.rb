@@ -25,8 +25,8 @@
 # end
 require "bundler/capistrano"
 require 'capistrano/ext/multistage'
-set :stages, %w(staging production_ldn)
-set :default_stage, "production_ldn"
+set :stages, %w(staging production)
+set :default_stage, "production"
 
 def template(from, to)
     erb = File.read(from)
