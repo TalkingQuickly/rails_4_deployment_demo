@@ -65,7 +65,7 @@ namespace :deploy do
     # copy them to the shared directory
 
     # create a nginx virtual host
-    template "config/deploy/#{}_resources/nginx.conf.erb", "#{shared_path}/config/nginx.conf"
+    template "config/deploy/#{rails_env}_resources/nginx.conf.erb", "#{shared_path}/config/nginx.conf"
     # define a control script for this applications unicorn workers
     template "config/deploy/#{rails_env}_resources/unicorn_init.sh.erb", "#{shared_path}/config/unicorn_init.sh"
     # define this applications unicorn configuration
