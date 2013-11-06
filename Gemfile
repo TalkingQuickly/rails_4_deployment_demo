@@ -32,6 +32,10 @@ group :doc do
   gem 'sdoc', require: false
 end
 
+group :production do
+  gem 'unicorn'
+end
+
 group :development do
   gem 'capistrano', '~>2.15'
 end
